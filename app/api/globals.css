@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-graphite bg-graph bg-graph font-body;
+  background-attachment: fixed;
+}
+
+::selection {
+  @apply bg-gold-soft text-ink;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.ink");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
